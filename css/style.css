@@ -1,0 +1,130 @@
+/* Navbar */
+.navbar-brand {
+  font-family: "Train One", cursive;
+  text-transform: uppercase;
+}
+.mylogo {
+  margin: 0px 5px 0px;
+  width: 50px;
+}
+
+/* Jumbotron */
+.jumbotron {
+  background-image: url("../img/CoverJumbotron.jpg");
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+.jumbotron::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 100%;
+  background-color: greenyellow;
+  position: absolute;
+  margin-top: 30px;
+}
+img.jumbotron-content-img {
+  width: 440px;
+  height: 350px;
+}
+
+/* Slideshow container */
+.mySlides {
+  margin-top: 15px;
+  display: none;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+  margin-top: 20px;
+}
+
+.dotted .active,
+.dotted .dot:hover {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* carousel */
+.carousel-indicators {
+  height: 20px;
+  padding-top: 5px;
+}
+.carousel-item {
+  width: 600px;
+  height: 320px;
+  margin-left: 20px;
+}
+
+/* Desktop section*/
+/* Navbar desktop */
+@media (min-width: 992px) {
+  .navbar-brand {
+    font-size: 32px;
+    font-weight: 300;
+  }
+  .navbar-brand,
+  .nav-link {
+    color: white !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  }
+  .nav-link {
+    text-transform: uppercase;
+    margin-right: 25px;
+    font-weight: 100;
+  }
+
+  .nav-link:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #0b63dc;
+    width: 75%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+    border-bottom-color: red;
+  }
+  /* Jumbotron Desktop */
+  .jumbotron {
+    margin-top: -82px;
+  }
+  .jumbotron::after {
+    content: "";
+    margin-top: 63px;
+  }
+  .carousel-item {
+    margin-top: 50px;
+    width: 1000px;
+    height: 520px;
+    margin-left: 160px;
+  }
+}
